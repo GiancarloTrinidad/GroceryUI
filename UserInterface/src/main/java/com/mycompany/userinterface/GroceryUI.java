@@ -332,7 +332,7 @@ public class GroceryUI extends javax.swing.JFrame {
         switch (category) {
             case "Meat":
                 String[] meatProducts = {"Beef 1kg", "Pork 1kg", "Chicken 1kg", "Lamb 1kg", "Duck 1kg"};
-                double[] meatPrices = {600.00, 169.00, 137.00, 1050.00, 168.00};
+                double[] meatPrices = {599.00, 169.00, 137.00, 1049.00, 168.00};
                 
                 for (int i = 0; i < meatProducts.length; i++){
                     products.set(i, meatProducts[i]);
@@ -341,8 +341,8 @@ public class GroceryUI extends javax.swing.JFrame {
                 break;
                 
             case "Seafood":
-                String[] seafoodProducts = {"krabby", "patty", "fish", "lobster", "squid"};
-                double[] seafoodPrices = {999.99, 169.00, 137.00, 1050.00, 168.00};
+                String[] seafoodProducts = {"Crab 1kg", "Shrimp 1kg", "Fish 1kg", "Lobster 1kg", "Squid 1kg"};
+                double[] seafoodPrices = {841.17, 295.33, 142.20, 217.63, 163.58};
                 
                 for (int i = 0; i < seafoodProducts.length; i++){
                     products.set(i, seafoodProducts[i]);
@@ -351,12 +351,42 @@ public class GroceryUI extends javax.swing.JFrame {
                 break;
                 
             case "Fruit":
-                String[] fruitProducts = {"krabby", "patty", "fish", "lobster", "squid"};
-                double[] fruitPrices = {999.99, 169.00, 137.00, 1050.00, 168.00};
+                String[] fruitProducts = {"Mango 1kg", "Apple 1kg", "Banana 1kg", "Orange 1kg", "Grapes 1kg"};
+                double[] fruitPrices = {158.60, 156.00, 70.00, 231.00, 465.00};
                 
                 for (int i = 0; i < fruitProducts.length; i++){
                     products.set(i, fruitProducts[i]);
                     prices.set(i, fruitPrices[i]);
+                }
+                break;
+                
+            case "Vegetable":
+                String[] vegetableProducts = {"Cabbage 1kg", "Onion 1kg", "Garlic 1kg", "Lettuce 1kg", "Carrot 1kg"};
+                double[] vegetablePrices = {25.00, 750.00, 210.00, 48.72, 76.53};
+                
+                for (int i = 0; i < vegetableProducts.length; i++){
+                    products.set(i, vegetableProducts[i]);
+                    prices.set(i, vegetablePrices[i]);
+                }
+                break;
+                                
+            case "Dairy":
+                String[] dairyProducts = {"Cheese", "Milk", "Yogurt", "Ice Cream", "Butter"};
+                double[] dairyPrices = {143.84, 149.99, 119.95, 344.00, 214.04};
+                
+                for (int i = 0; i < dairyProducts.length; i++){
+                    products.set(i, dairyProducts[i]);
+                    prices.set(i, dairyPrices[i]);
+                }
+                break;
+
+            case "Miscellaneous":
+                String[] miscellaneousProducts = {"Egg 1dz", "Hotdog", "Tocino", "Nuggets", "Tapa"};
+                double[] miscellaneousPrices = {82.80, 153.00, 164.65, 129.00, 190.00};
+                
+                for (int i = 0; i < miscellaneousProducts.length; i++){
+                    products.set(i, miscellaneousProducts[i]);
+                    prices.set(i, miscellaneousPrices[i]);
                 }
                 break;
         }
