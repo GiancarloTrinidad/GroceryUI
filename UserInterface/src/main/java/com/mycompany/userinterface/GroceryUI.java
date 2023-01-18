@@ -10,10 +10,12 @@ import java.util.Arrays;
  * @author Gian
  */
 public class GroceryUI extends javax.swing.JFrame {
-
+    
+    ArrayList<String> cartProducts = new ArrayList<>();
+    ArrayList<Double> cartPrices = new ArrayList<>();
     ArrayList<String> products = new ArrayList<>(Arrays.asList("", "", "", "", ""));
     ArrayList<Double> prices = new ArrayList<>(Arrays.asList(0.0, 0.0, 0.0, 0.0, 0.0));
-    
+        
     /**
      * Creates new form GroceryUI
      */
@@ -316,15 +318,24 @@ public class GroceryUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMeatActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        double total = 0;
+
+        double total;
         double quantity = Double.parseDouble(fldProductQuantity1.getText());
         
-        for (int i = 0; i==5; i++) {
+        for (int i = 0; i < products.size(); i++) {
             if (quantity != 0){
-                //total = price[i] * quantity;
-                btnAdd.setText("" + total);
+                cartProducts.add(products.get(i));
+                cartPrices.add(prices.get(i));
             }
+            total = prices.get(i) * quantity;
+            btnAdd.setText("" + total);
         }
+        
+        fldProductQuantity1.setText("0");
+        fldProductQuantity2.setText("0");
+        fldProductQuantity3.setText("0");
+        fldProductQuantity4.setText("0");
+        fldProductQuantity5.setText("0");
     }//GEN-LAST:event_btnAddActionPerformed
     
     private void categoryDisplay(String category){
@@ -360,7 +371,7 @@ public class GroceryUI extends javax.swing.JFrame {
                 }
                 break;
                 
-            case "Vegetable":
+            case "Vegetables":
                 String[] vegetableProducts = {"Cabbage 1kg", "Onion 1kg", "Garlic 1kg", "Lettuce 1kg", "Carrot 1kg"};
                 double[] vegetablePrices = {25.00, 750.00, 210.00, 48.72, 76.53};
                 
