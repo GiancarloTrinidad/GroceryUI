@@ -3,16 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.userinterface;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 /**
  *
  * @author Gian
  */
 public class GroceryUI extends javax.swing.JFrame {
-    
-    double beefPrice = 600.00, porkPrice = 169.00, chickenPrice = 137.00;
-    
 
+    ArrayList<String> products = new ArrayList<>(Arrays.asList("", "", "", "", ""));
+    ArrayList<Double> prices = new ArrayList<>(Arrays.asList(0.0, 0.0, 0.0, 0.0, 0.0));
+    
     /**
      * Creates new form GroceryUI
      */
@@ -207,14 +208,12 @@ public class GroceryUI extends javax.swing.JFrame {
                                                 .addComponent(lblProductName5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGap(39, 39, 39)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(layout.createSequentialGroup()
-                                                    .addComponent(lblPrice)
-                                                    .addGap(14, 14, 14))
                                                 .addComponent(lblProductPrice1)
                                                 .addComponent(lblProductPrice2)
                                                 .addComponent(lblProductPrice3)
                                                 .addComponent(lblProductPrice4)
-                                                .addComponent(lblProductPrice5))))
+                                                .addComponent(lblProductPrice5)
+                                                .addComponent(lblPrice))))
                                     .addGap(18, 18, 18)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lblAmount)
@@ -293,92 +292,87 @@ public class GroceryUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListActionPerformed
 
     private void btnVegetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVegetableActionPerformed
-        lblCategoryName.setText("Vegetables");
-        lblProductName1.setText("Beef 1kg");
-        lblProductName2.setText("Pork 1kg");
-        lblProductName3.setText("Chicken 1kg");
-        lblProductName4.setText("No Info");
-        lblProductName5.setText("No Info");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("P " + chickenPrice);
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("No Info");
+        categoryDisplay("Vegetables");
     }//GEN-LAST:event_btnVegetableActionPerformed
 
     private void btnSeafoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeafoodActionPerformed
-        lblCategoryName.setText("Seafood");
-        lblProductName1.setText("Clam");
-        lblProductName2.setText("lobster");
-        lblProductName3.setText("krabby");
-        lblProductName4.setText("Salmon");
-        lblProductName5.setText("Squid");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("patty");
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("Game");
+        categoryDisplay("Seafood");
     }//GEN-LAST:event_btnSeafoodActionPerformed
 
     private void btnFruitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFruitActionPerformed
-        lblCategoryName.setText("Fruit");
-        lblProductName1.setText("Beef 1kg");
-        lblProductName2.setText("Pork 1kg");
-        lblProductName3.setText("Chicken 1kg");
-        lblProductName4.setText("No Info");
-        lblProductName5.setText("No Info");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("P " + chickenPrice);
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("No Info");
+        categoryDisplay("Fruit");
     }//GEN-LAST:event_btnFruitActionPerformed
 
     private void btnDairyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDairyActionPerformed
-        lblCategoryName.setText("Dairy");
-        lblProductName1.setText("Beef 1kg");
-        lblProductName2.setText("Pork 1kg");
-        lblProductName3.setText("Chicken 1kg");
-        lblProductName4.setText("No Info");
-        lblProductName5.setText("No Info");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("P " + chickenPrice);
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("No Info");
+        categoryDisplay("Dairy");
     }//GEN-LAST:event_btnDairyActionPerformed
 
     private void btnMiscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMiscActionPerformed
-        lblCategoryName.setText("Miscellaneous");
-        lblProductName1.setText("Beef 1kg");
-        lblProductName2.setText("Pork 1kg");
-        lblProductName3.setText("Chicken 1kg");
-        lblProductName4.setText("No Info");
-        lblProductName5.setText("No Info");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("P " + chickenPrice);
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("No Info");
+        categoryDisplay("Miscellaneous");
     }//GEN-LAST:event_btnMiscActionPerformed
 
     private void btnMeatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMeatActionPerformed
-        lblCategoryName.setText("Meat");
-        lblProductName1.setText("Beef 1kg");
-        lblProductName2.setText("Pork 1kg");
-        lblProductName3.setText("Chicken 1kg");
-        lblProductName4.setText("No Info");
-        lblProductName5.setText("No Info");
-        lblProductPrice1.setText("P " + beefPrice);
-        lblProductPrice2.setText("P " + porkPrice);
-        lblProductPrice3.setText("P " + chickenPrice);
-        lblProductPrice4.setText("No Info");
-        lblProductPrice5.setText("No Info");
+        categoryDisplay("Meat");
     }//GEN-LAST:event_btnMeatActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
+        double total = 0;
+        double quantity = Double.parseDouble(fldProductQuantity1.getText());
+        
+        for (int i = 0; i==5; i++) {
+            if (quantity != 0){
+                //total = price[i] * quantity;
+                btnAdd.setText("" + total);
+            }
+        }
     }//GEN-LAST:event_btnAddActionPerformed
+    
+    private void categoryDisplay(String category){
+        
+        switch (category) {
+            case "Meat":
+                String[] meatProducts = {"Beef 1kg", "Pork 1kg", "Chicken 1kg", "Lamb 1kg", "Duck 1kg"};
+                double[] meatPrices = {600.00, 169.00, 137.00, 1050.00, 168.00};
+                
+                for (int i = 0; i < meatProducts.length; i++){
+                    products.set(i, meatProducts[i]);
+                    prices.set(i, meatPrices[i]);
+                }
+                break;
+                
+            case "Seafood":
+                String[] seafoodProducts = {"krabby", "patty", "fish", "lobster", "squid"};
+                double[] seafoodPrices = {999.99, 169.00, 137.00, 1050.00, 168.00};
+                
+                for (int i = 0; i < seafoodProducts.length; i++){
+                    products.set(i, seafoodProducts[i]);
+                    prices.set(i, seafoodPrices[i]);
+                }
+                break;
+                
+            case "Fruit":
+                String[] fruitProducts = {"krabby", "patty", "fish", "lobster", "squid"};
+                double[] fruitPrices = {999.99, 169.00, 137.00, 1050.00, 168.00};
+                
+                for (int i = 0; i < fruitProducts.length; i++){
+                    products.set(i, fruitProducts[i]);
+                    prices.set(i, fruitPrices[i]);
+                }
+                break;
+        }
+        
+        lblCategoryName.setText(category);
+        lblProductName1.setText(products.get(0));
+        lblProductName2.setText(products.get(1));
+        lblProductName3.setText(products.get(2));
+        lblProductName4.setText(products.get(3));
+        lblProductName5.setText(products.get(4));
+        lblProductPrice1.setText("P " + prices.get(0));
+        lblProductPrice2.setText("P " + prices.get(1));
+        lblProductPrice3.setText("P " + prices.get(2));
+        lblProductPrice4.setText("P " + prices.get(3));
+        lblProductPrice5.setText("P " + prices.get(4));
+    }
     
 
     /**
