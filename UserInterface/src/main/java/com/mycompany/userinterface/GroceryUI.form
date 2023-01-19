@@ -27,75 +27,72 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
+              <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="lblGrocery" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="btnList" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblGrocery" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="btnList" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblCategoryName" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lblCategory" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="btnMeat" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnFruit" min="-2" pref="90" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnDairy" min="-2" pref="90" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblCategoryName" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="lblCategory" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
-                                      <Component id="btnMeat" min="-2" pref="90" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="btnSeafood" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btnFruit" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btnDairy" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btnVegetable" min="-2" pref="90" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btnSeafood" min="-2" pref="90" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btnVegetable" min="-2" pref="90" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="lblProduct" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblProductName1" pref="70" max="32767" attributes="0"/>
-                                              <Component id="lblProductName2" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lblProductName3" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lblProductName4" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lblProductName5" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblProductPrice1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblProductPrice2" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblProductPrice3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblProductPrice4" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblProductPrice5" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblPrice" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblProduct" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductName1" pref="70" max="32767" attributes="0"/>
+                                      <Component id="lblProductName2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblProductName3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblProductName4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblProductName5" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblAmount" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fldProductQuantity1" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="fldProductQuantity2" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="fldProductQuantity3" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="fldProductQuantity4" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="fldProductQuantity5" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="btnMisc" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="lblProductPrice1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductPrice2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductPrice3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductPrice4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductPrice5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPrice" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblAmount" min="-2" max="-2" attributes="0"/>
+                              <Component id="fldProductQuantity1" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="fldProductQuantity2" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="fldProductQuantity3" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="fldProductQuantity4" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="fldProductQuantity5" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="btnMisc" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
-                      <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="30" max="32767" attributes="0"/>
+              <EmptySpace min="106" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
