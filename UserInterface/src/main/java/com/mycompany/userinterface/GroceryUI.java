@@ -11,6 +11,10 @@ import java.util.Arrays;
  */
 public class GroceryUI extends javax.swing.JFrame {
     
+    int frameWidth = 350;
+    int frameHeight = 300;
+    boolean isPressed = true;
+    
     ArrayList<String> cartProducts = new ArrayList<>();
     ArrayList<Double> cartPrices = new ArrayList<>();
     ArrayList<Double> cartQuantity = new ArrayList<>();
@@ -21,7 +25,10 @@ public class GroceryUI extends javax.swing.JFrame {
      * Creates new form GroceryUI
      */
     public GroceryUI() {
+        setTitle("Grocery Market");
+        setSize(frameWidth, frameHeight);
         initComponents();
+        showControls(false);
     }
 
     /**
@@ -64,7 +71,8 @@ public class GroceryUI extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(350, 600));
+        setPreferredSize(new java.awt.Dimension(350, 300));
+        setSize(new java.awt.Dimension(350, 300));
 
         lblGrocery.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblGrocery.setText("GroceryMarket");
@@ -176,59 +184,60 @@ public class GroceryUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(btnAdd)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblGrocery)
-                        .addGap(65, 65, 65)
-                        .addComponent(btnList))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblCategoryName)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnMeat, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addComponent(btnFruit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnDairy, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(btnAdd))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblGrocery)
+                                .addGap(65, 65, 65)
+                                .addComponent(btnList))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblCategoryName)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btnSeafood, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnMeat, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(18, 18, 18)
-                                    .addComponent(btnVegetable, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnFruit, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnDairy, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGap(15, 15, 15)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblProduct)
-                                        .addComponent(lblProductName1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                                        .addComponent(lblProductName2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblProductName3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblProductName4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblProductName5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGap(39, 39, 39)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblProductPrice1)
-                                        .addComponent(lblProductPrice2)
-                                        .addComponent(lblProductPrice3)
-                                        .addComponent(lblProductPrice4)
-                                        .addComponent(lblProductPrice5)
-                                        .addComponent(lblPrice))))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblAmount)
-                                .addComponent(fldProductQuantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fldProductQuantity2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fldProductQuantity3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fldProductQuantity4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fldProductQuantity5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnMisc, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(btnSeafood, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(btnVegetable, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(15, 15, 15)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(lblProduct)
+                                                .addComponent(lblProductName1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                                .addComponent(lblProductName2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lblProductName3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lblProductName4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(lblProductName5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(39, 39, 39)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lblProductPrice1)
+                                                .addComponent(lblProductPrice2)
+                                                .addComponent(lblProductPrice3)
+                                                .addComponent(lblProductPrice4)
+                                                .addComponent(lblProductPrice5)
+                                                .addComponent(lblPrice))))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblAmount)
+                                        .addComponent(fldProductQuantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fldProductQuantity2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fldProductQuantity3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fldProductQuantity4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fldProductQuantity5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnMisc, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(284, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,7 +246,7 @@ public class GroceryUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnList, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblGrocery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 28, Short.MAX_VALUE)
                 .addComponent(lblCategory)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -283,15 +292,23 @@ public class GroceryUI extends javax.swing.JFrame {
                     .addComponent(fldProductQuantity5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAdd)
-                .addGap(112, 112, 112))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListActionPerformed
-        lblCategory.setVisible(false);
-        btnMeat.setVisible(false);
+        if (isPressed) {
+            frameWidth = 600;
+            setSize(frameWidth,frameHeight);
+            isPressed = false;
+        }
+        else {
+            frameWidth = 350;
+            setSize(frameWidth,frameHeight);
+            isPressed = true;
+        }
     }//GEN-LAST:event_btnListActionPerformed
 
     private void btnVegetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVegetableActionPerformed
@@ -349,6 +366,7 @@ public class GroceryUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddActionPerformed
     
     private void categoryDisplay(String category){
+        showControls(true);
         
         switch (category) {
             case "Meat":
@@ -425,6 +443,32 @@ public class GroceryUI extends javax.swing.JFrame {
         lblProductPrice5.setText("P " + prices.get(4));
     }
     
+    private void showControls(boolean isVisible){
+        if (isVisible) {
+            frameHeight = 600;
+            setSize(frameWidth, frameHeight);
+        }
+        lblCategoryName.setVisible(isVisible);
+        lblProduct.setVisible(isVisible);
+        lblPrice.setVisible(isVisible);
+        lblAmount.setVisible(isVisible);
+        lblProductName1.setVisible(isVisible);
+        lblProductName2.setVisible(isVisible);
+        lblProductName3.setVisible(isVisible);
+        lblProductName4.setVisible(isVisible);
+        lblProductName5.setVisible(isVisible);
+        lblProductPrice1.setVisible(isVisible);
+        lblProductPrice2.setVisible(isVisible);
+        lblProductPrice3.setVisible(isVisible);
+        lblProductPrice4.setVisible(isVisible);
+        lblProductPrice5.setVisible(isVisible);
+        fldProductQuantity1.setVisible(isVisible);
+        fldProductQuantity2.setVisible(isVisible);
+        fldProductQuantity3.setVisible(isVisible);
+        fldProductQuantity4.setVisible(isVisible);
+        fldProductQuantity5.setVisible(isVisible);
+        btnAdd.setVisible(isVisible);
+    }
 
     /**
      * @param args the command line arguments
@@ -456,7 +500,7 @@ public class GroceryUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run(){
                 new GroceryUI().setVisible(true);
             }
         });
