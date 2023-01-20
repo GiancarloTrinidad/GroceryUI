@@ -14,6 +14,7 @@ public class ReceiptUI extends javax.swing.JFrame {
      * Creates new form ReceiptUI
      */
     public ReceiptUI() {
+        setTitle("Receipt");
         initComponents();
     }
 
@@ -38,11 +39,11 @@ public class ReceiptUI extends javax.swing.JFrame {
         lblAmountReceivedNumber = new javax.swing.JLabel();
         lblChangeNumber = new javax.swing.JLabel();
         scrollPane = new javax.swing.JScrollPane();
-        tblShoppingList = new javax.swing.JTable();
+        tblReceipt = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblTitle.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("GroceryMarket");
         lblTitle.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -59,14 +60,16 @@ public class ReceiptUI extends javax.swing.JFrame {
         lblThankYou.setText("THANK YOU FOR SHOPPING!");
 
         lblTotalNumber.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblTotalNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblTotalNumber.setText("P 0.00");
 
+        lblAmountReceivedNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblAmountReceivedNumber.setText("P 0.00");
 
+        lblChangeNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblChangeNumber.setText("P 0.00");
 
-        tblShoppingList.setForeground(new java.awt.Color(242, 242, 242));
-        tblShoppingList.setModel(new javax.swing.table.DefaultTableModel(
+        tblReceipt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -82,18 +85,13 @@ public class ReceiptUI extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tblShoppingList.setToolTipText("");
-        tblShoppingList.setGridColor(new java.awt.Color(242, 242, 242));
-        tblShoppingList.getTableHeader().setResizingAllowed(false);
-        tblShoppingList.getTableHeader().setReorderingAllowed(false);
-        tblShoppingList.setUpdateSelectionOnSort(false);
-        tblShoppingList.setVerifyInputWhenFocusTarget(false);
-        tblShoppingList.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                tblShoppingListKeyPressed(evt);
-            }
-        });
-        scrollPane.setViewportView(tblShoppingList);
+        tblReceipt.setToolTipText("");
+        tblReceipt.setGridColor(new java.awt.Color(242, 242, 242));
+        tblReceipt.getTableHeader().setResizingAllowed(false);
+        tblReceipt.getTableHeader().setReorderingAllowed(false);
+        tblReceipt.setUpdateSelectionOnSort(false);
+        tblReceipt.setVerifyInputWhenFocusTarget(false);
+        scrollPane.setViewportView(tblReceipt);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,15 +108,14 @@ public class ReceiptUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblAmountReceived, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                             .addComponent(lblChange, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblAmountReceived, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblAmountReceivedNumber)
-                                .addComponent(lblChangeNumber))
-                            .addComponent(lblTotalNumber, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblAmountReceivedNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblChangeNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblTotalNumber, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
                         .addGap(8, 8, 8))
                     .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
                     .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
@@ -158,10 +155,6 @@ public class ReceiptUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void tblShoppingListKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblShoppingListKeyPressed
-
-    }//GEN-LAST:event_tblShoppingListKeyPressed
 
     /**
      * @param args the command line arguments
@@ -203,14 +196,14 @@ public class ReceiptUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblAmountReceived;
-    private javax.swing.JLabel lblAmountReceivedNumber;
+    public javax.swing.JLabel lblAmountReceivedNumber;
     private javax.swing.JLabel lblChange;
-    private javax.swing.JLabel lblChangeNumber;
+    public javax.swing.JLabel lblChangeNumber;
     private javax.swing.JLabel lblThankYou;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblTotal;
-    private javax.swing.JLabel lblTotalNumber;
+    public javax.swing.JLabel lblTotalNumber;
     private javax.swing.JScrollPane scrollPane;
-    private javax.swing.JTable tblShoppingList;
+    public javax.swing.JTable tblReceipt;
     // End of variables declaration//GEN-END:variables
 }
